@@ -62,14 +62,14 @@ def get_details(stations):
         info_list = bsObj.find( "div", {"class": 'info clearfix'}).findAll('h1')
         for info in info_list:
              name = info.get_text() 
-             print (info.get_text())
+             #print (info.get_text())
         
              
         time.sleep(2)
         followers = bsObj.find('li', {'class': 'followed-by fl-l'}).findAll( "div", {"class": 'count'})
         for list in followers: 
              follow = list.get_text()
-             print (list.get_text())
+             #print (list.get_text())
         
         time.sleep(2)
              
@@ -77,12 +77,12 @@ def get_details(stations):
         try: 
             genres = bsObj.find('li', {'class': 'dark-link'}).findAll('a')
             for type in genres: 
-                print (type.get_text())
+                #print (type.get_text())
                 music = type.get_text()
             
                 
         except:
-            print ( "None" )
+            #print ( "None" )
             music = 'None'
             
         
@@ -90,7 +90,7 @@ def get_details(stations):
         location = bsObj.findAll('span', {'itemprop': 'contentLocation'})
         for place in location:
              where = place.get_text()
-             print (place.get_text())
+             #print (place.get_text())
        
         time.sleep(2)
        
